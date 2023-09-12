@@ -1,0 +1,43 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 232px;
+    width: 159px;
+    border-radius: 10px;
+    color: var(--color-white);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.imageFollowers{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    height: 205px;
+    background: var(--color-white);
+    border-radius: 10px;
+}
+
+.follow{
+    background: var(--color-black);
+    border-radius: 10px;
+    width: 98px;
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px 8px;
+    gap: 1px;
+}
+
+.textSize{
+    width: 72px;
+    height: 15px;
+    /* font-family: Poppins; */
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+}

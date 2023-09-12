@@ -1,21 +1,11 @@
-.heroContainer {
-    height: 270px;
-    color: var(--color-white);
-    padding: 28px 28px 0 0;
-}
-
 .heroSection {
+    background-color: var(--color-black);
+    height: 270px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-right: 31px;
+    text-align: center;
+    gap: 30px;
 }
 
 .headphoneImg{

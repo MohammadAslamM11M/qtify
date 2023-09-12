@@ -1,0 +1,28 @@
+.parentAlbum{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 32px;
+    color: var(--color-white);
+}
+
+.albumHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.albumCarousel{
+    display: flex;
+    justify-content: flex-start;
+    align-content: normal;
+    flex-wrap: wrap;
+    row-gap: 18px;
+    column-gap: 48px;
+    color: var(--color-white);
+}
+
+.collap{
+    color: var(--color-primary);
+    cursor: pointer;
+}
