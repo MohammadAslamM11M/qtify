@@ -1,18 +1,33 @@
 import React from "react";
+import { Chip } from "@mui/material";
 import styles from "./Card.module.css";
 
-const Card = ({ cardImage, followers, title }) => {
-    return (
-        <div className={styles.card}>
-            <div className={styles.imageFollowers}>
-                <img src={cardImage} alt="cardImage" loading="lazy" object-fit="contain" height={170} width={159} />
-                <span className={styles.follow}>
-                    <p className={styles.textSize}>{followers + " Follows"}</p>
-                </span>
-            </div>
-            <p>{title}</p>
-        </div>
-    );
+const Card = ({ data, type }) => {
+    const getCard = (type) => {
+        switch (type) {
+            case "album": {
+                const { image, follows, title, songs } = data;
+
+                return (
+                    <div className={styles.wrapper}>
+                        <div className={styles.card}>
+                            <img src={image} alt="cardImage" />
+                            <div className={styles.banner}>
+                                <Chip className={styles.chip} label={`${follows}`} Follows size="small" />
+                            </div>
+                        </div>
+                        <div className={styles.titleWrapper}>
+                            <p>{title}</p>
+                        </div>
+                    </div>
+                );
+            }
+            default:
+                return <></>;
+        }
+    };
+
+    return getCard(type);
 };
 
 export default Card;

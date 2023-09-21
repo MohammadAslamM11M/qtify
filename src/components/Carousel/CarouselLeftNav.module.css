@@ -1,0 +1,8 @@
+.leftArrow {
+    position: absolute;
+    cursor: pointer;
+    left: 25px;
+    top: 40%;
+    transform: translate(-50%);
+    z-index: 10;
+}

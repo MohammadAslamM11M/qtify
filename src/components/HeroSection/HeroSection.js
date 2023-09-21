@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./HeroSection.module.css";
 
-function HeroSection({ text1, text2 }) {
+function HeroSection() {
     return (
         <div className={styles.heroSection}>
             <div>
-                <h1>{text1}</h1>
-                <h1>{text2}</h1>
+                <h1>100 Thousand Songs, ad-free</h1>
+                <h1>Over thousands podcast episodes</h1>
             </div>
             <img
                 className={styles.headphoneImg}

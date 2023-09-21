@@ -6,7 +6,7 @@ function Search() {
     return (
         <div>
             <form action="" className={styles.wrapper}>
-                <input className={styles.search} type="text" placeholder="Search a album of your choice"/>
+                <input className={styles.search} type="text" placeholder="Search a album of your choice" />
                 <div>
                     <button className={styles.searchButton} type="submit">
                         <SearchIcon />

@@ -1,0 +1,12 @@
+.wrapper {
+    position: relative;
+}
+
+.rightArrow {
+    position: absolute;
+    cursor: pointer;
+    right: 0px;
+    top: 40%;
+    transform: translate(-50%);
+    z-index: 10;
+}

@@ -1,9 +1,9 @@
-.wrapper{
+.wrapper {
     display: flex;
     align-items: stretch;
     height: 48px;
 }
-.search{
+.search {
     padding: 14px 20px;
     height: 100%;
     border-radius: 8px;
