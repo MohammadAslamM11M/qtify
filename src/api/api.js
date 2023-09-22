@@ -12,4 +12,13 @@ const fetchTopAlbums = async () => {
     }
 };
 
-export default fetchTopAlbums;
+const fetchNewAlbums = async () => {
+    try {
+        const res = await axios.get(`${BACKEND_ENDPOINT}/albums/new`);
+        return res.data;
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+export { fetchTopAlbums, fetchNewAlbums };
