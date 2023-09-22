@@ -1,0 +1,9 @@
+
+.rightArrow {
+    position: absolute;
+    cursor: pointer;
+    right: -6px;
+    top: 40%;
+    transform: translate(-50%);
+    z-index: 10;
+}

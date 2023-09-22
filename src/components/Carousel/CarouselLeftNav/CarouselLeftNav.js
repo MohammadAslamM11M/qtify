@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSwiper } from "swiper/react";
-import { ReactComponent as LeftArrow } from "../../assets/LeftSlide.svg";
+import { ReactComponent as LeftArrow } from "../../../assets/LeftSlide.svg";
+import "swiper/css";
 import styles from "./CarouselLeftNav.module.css";
 
 const CarouselLeftNav = () => {
@@ -11,7 +12,7 @@ const CarouselLeftNav = () => {
         swiper.on("slideChange", function () {
             setIsBeginning(swiper.isBeginning);
         });
-    }, []);
+    }, [swiper]);
     return <div className={styles.leftArrow}>{!isBeginning && <LeftArrow onClick={() => swiper.slidePrev()} />}</div>;
 };
 
