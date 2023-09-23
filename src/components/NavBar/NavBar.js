@@ -4,13 +4,15 @@ import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
 import styles from "./NavBar.module.css";
 
-function NavBar() {
+function NavBar({ data }) {
     return (
-        <nav className={styles.navbar}>
-            <Logo />
-            <Search />
-            <Button children="Give Feedback" />
-        </nav>
+        <div className={styles.wrapper}>
+            <nav className={styles.navbar}>
+                <Logo id="id" />
+                <Search data={data} />
+                <Button children="Give Feedback" />
+            </nav>
+        </div>
     );
 }
 

@@ -82,9 +82,11 @@ function App() {
         generateAllSongData();
     }, []);
 
+    const dropdownData = topAlbumsData?.concat(newAlbumsData);
+
     return (
         <div className={styles.sectionWrapper}>
-            <NavBar />
+            <NavBar data={dropdownData}/>
             <HeroSection />
             <div>
                 <Section
@@ -101,6 +103,7 @@ function App() {
                     filteredDataValues={newAlbumsData}
                     toggle={toggle}
                 />
+                <hr className={styles.line}></hr>
                 <Section
                     data={songData}
                     title="Songs"
@@ -112,6 +115,7 @@ function App() {
                     filteredDataValues={filteredDataValues}
                     toggle={toggle}
                 />
+                <hr className={styles.line}></hr>
                 <AccordionSection />
             </div>
         </div>
