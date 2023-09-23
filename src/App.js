@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Section from "./components/Section/Section";
+import AccordionSection from "./components/Accordion/Accordion";
 import { fetchTopAlbums, fetchNewAlbums, fetchSongs } from "./api/api";
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
     const [topAlbumsData, setTopAlbumsData] = useState([]);
@@ -82,7 +83,7 @@ function App() {
     }, []);
 
     return (
-        <div className="App">
+        <div className={styles.sectionWrapper}>
             <NavBar />
             <HeroSection />
             <div>
@@ -111,6 +112,7 @@ function App() {
                     filteredDataValues={filteredDataValues}
                     toggle={toggle}
                 />
+                <AccordionSection />
             </div>
         </div>
     );

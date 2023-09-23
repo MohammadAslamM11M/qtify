@@ -33,7 +33,7 @@ const Card = ({ data, type }) => {
                             <img src={image} alt="song" loading="lazy" />
                             <div className={styles.banner}>
                                 <div className={styles.pill}>
-                                    <p>{likes} Likes</p>
+                                    <Chip className={styles.chip} label={`${likes} Likes`} size="small" />
                                 </div>
                             </div>
                         </div>

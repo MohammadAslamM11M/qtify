@@ -34,11 +34,11 @@ const Section = ({
                     {toggle ? (
                         <div className={styles.wrapper}>
                             {filteredDataValues.map((item) => (
-                                <Card data={item} type={type} />
+                                <Card key={item.id} data={item} type={type} />
                             ))}
                         </div>
                     ) : (
-                        <Carousel data={filteredDataValues} component={(ele) => <Card data={ele} type={type} />} />
+                        <Carousel data={filteredDataValues} component={(ele) => <Card key={ele.id} data={ele} type={type} />} />
                     )}
                 </div>
             )}
