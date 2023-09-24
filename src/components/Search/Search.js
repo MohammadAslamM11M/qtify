@@ -7,7 +7,7 @@ function Search({ data }) {
     const [inputValue, setInputValue] = useState("");
     const [filteredOptions, setFilteredOptions] = useState([]);
 
-    const _filterData = (data) => {
+    const filterData = (data) => {
         if (!inputValue) {
             setFilteredOptions([]);
             return;
@@ -21,7 +21,7 @@ function Search({ data }) {
     };
 
     useEffect(() => {
-        _filterData(data);
+        filterData(data);
     }, [inputValue]);
 
     return (
@@ -31,7 +31,7 @@ function Search({ data }) {
                     className={styles.search}
                     type="text"
                     value={inputValue}
-                    placeholder="Search a album of your choice"
+                    placeholder="Search album of your choice"
                     onChange={(e) => setInputValue(e.target.value)}
                 />
                 <div>

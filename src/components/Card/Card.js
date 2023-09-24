@@ -1,8 +1,11 @@
 import React from "react";
 import { Chip, Tooltip } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import styles from "./Card.module.css";
 
 const Card = ({ data, type }) => {
+    const navigate = useNavigate();
+    
     const getCard = (type) => {
         switch (type) {
             case "album": {
@@ -11,7 +14,7 @@ const Card = ({ data, type }) => {
                 return (
                     <Tooltip title={`${songs.length} songs`} placement="top" arrow>
                         <div className={styles.wrapper}>
-                            <div className={styles.card}>
+                            <div className={styles.card} onClick={() => navigate(`/album/${slug}`)}>
                                 <img src={image} alt="album" />
                                 <div className={styles.banner}>
                                     <Chip className={styles.chip} label={`${follows} Follows`} size="small" />

@@ -21,11 +21,11 @@ const Section = ({
             <div className={styles.header}>
                 <h3>{title}</h3>
                 <h4 className={styles.toggleText} onClick={handleToggle}>
-                    {!toggle ? "Show All" : "Collapse All"}
+                    {!toggle ? "Show All" : "Collapse"}
                 </h4>
             </div>
             {type === "song" ? <BasicTabs value={value} handleChange={handleChange} /> : null}
-            {data.length === 0 ? (
+            {data?.length === 0 ? (
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                     <CircularProgress />
                 </Box>
@@ -38,7 +38,10 @@ const Section = ({
                             ))}
                         </div>
                     ) : (
-                        <Carousel data={filteredDataValues} component={(ele) => <Card key={ele.id} data={ele} type={type} />} />
+                        <Carousel
+                            data={filteredDataValues}
+                            component={(ele) => <Card key={ele.id} data={ele} type={type} />}
+                        />
                     )}
                 </div>
             )}

@@ -1,0 +1,10 @@
+.sectionWrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .line{
+    border: 1px solid var(--color-primary);
+      border-radius: 5px;
+      margin: 30px 0px;
+  }

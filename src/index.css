@@ -46,3 +46,17 @@ textarea,
 select {
     font: inherit;
 }
+
+.css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background-color: var(--color-primary) !important;
+    color: black !important;
+}
+
+.css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root.Mui-disabled {
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
+}
+
+.css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root {
+    color: rgb(255, 255, 255) !important;
+}
